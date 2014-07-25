@@ -1,4 +1,5 @@
 # 忽略所有生成的 html文件,
 *.pyc
+*.xls
 /config/yun_config
 /logs
