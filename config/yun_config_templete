@@ -1,0 +1,16 @@
+[aliyun]
+url = https://ecs.aliyuncs.com
+id  = **
+key = **
+
+[ucloud]
+url = http://api.ucloud.cn
+id  = **
+key = **
+
+
+[amazon]
+url = http://api.ucloud.cn
+id  = **
+key = **
+
