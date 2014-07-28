@@ -23,7 +23,7 @@ class last_ip(auto_run):
         
         temp = []
         for i in assets.get_monitor():
-            i['cmd']  = '''nohup wget --no-check-certificate https://raw.githubusercontent.com/djshell/hosts_manage/master/monitor/client.py -O client.py;python client.py &'''
+            i['cmd']  = '''mkdir monitor;cd monitor;nohup wget -c -r  -N, –timestamping --no-check-certificate https://raw.githubusercontent.com/djshell/hosts_manage/master/monitor/; python client.py &'''
             temp.append(i)
             
         super(last_ip, self).__init__(temp)
