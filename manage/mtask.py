@@ -226,8 +226,11 @@ class Mtask(Process):
         
           
         lent = len(self.cmd_param)
-
-        temp_list = self.div_list(self.cmd_param, self.child_num)
+        temp_list = []
+        if lent <= 10:
+            temp_list.append(self.cmd_param)
+        else:
+            temp_list = self.div_list(self.cmd_param, self.child_num)
         print '共有任务: %s 条,共产生: %s 批次任务'% (lent,len(temp_list))    
         
         #os.popen('/opt/local/junos/junos')  
@@ -256,7 +259,7 @@ class Mtask(Process):
         print u'进程加载完毕等待进程结束'
         while 1:
 
-            time.sleep(1)
+            time.sleep(3)
             #设置超时
             end_time = datetime.datetime.now()
             interval=(end_time - self.start_time).seconds

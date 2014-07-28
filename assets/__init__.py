@@ -30,6 +30,16 @@ class assets(object):
                         and public_ip not in("115.29.12.230","115.29.12.219","49.213.111.2","49.213.111.3","49.213.111.4","49.213.111.5","49.213.111.6") \
                         order by id')
         
+    @staticmethod
+    def get_monitor():
+        n = Custom_MySQL(using='center_app')
+        
+        return n.query('select public_ip as ip,22 as port,"playcrab" as  user,pwd  \
+                        from assets \
+                        where \
+                        public_ip ="115.29.10.48" \
+                       ')
+                
     @staticmethod    
     def get_idcs(idc_name):
         db = Custom_MySQL(using='center_app')

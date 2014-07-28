@@ -16,7 +16,7 @@ import threading,Queue
 import syslog
 
 
-port = 8010
+port = 32777 
 buf_size = 1024
 
 APPDIC = {}

@@ -106,7 +106,7 @@ class Master(Process):
        
         print '%s load work finish '% self.name
         while 1:
-            time.sleep(1)
+            time.sleep(10)
             if self.__check_child_is_alive() == True:
 
                 break

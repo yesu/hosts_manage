@@ -6,7 +6,7 @@ import sys
 
 def clint():
      host = '203.90.236.112'
-     port = 8010
+     port = 32777
      bufsize = 1024
      addr = (host,port)
      client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
